@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wingspan Score Calculator</title>
+<style>
+
+@font-face {
+    font-family: "WingspanCustom";
+    src: url("./CardenioModern-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+font-family: "WingspanCustom", Arial, sans-serif;
+background-image: url("background v1.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 20px;
+}
+
+
+h1 {
+    text-align:center;
+}
+
+table {
+    border-collapse: collapse;
+    margin:auto;
+}
+
+th, td {
+    border:2px solid #413e3d;
+    padding:8px;
+    text-align:center;
+}
+
+th:first-child, td:first-child {
+    text-align:left;
+    font-weight:bold;
+}
+
+input {
+    width:60px;
+    font-size:16px;
+    text-align:center;
+}
+
+.total {
+    font-weight:bold;
+    font-size:18px;
+}
+
+thead th {
+    background:#e0d7be;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Wingspan Score Calculator</h1>
+
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Player 1</th>
+<th>Player 2</th>
+<th>Player 3</th>
+<th>Player 4</th>
+<th>Player 5</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Birds</td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+</tr>
+
+<tr>
+<td>Bonus Cards</td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+</tr>
+
+<tr>
+<td>End-of-Round Goals</td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+</tr>
+
+<tr>
+<td>Eggs</td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+</tr>
+
+<tr>
+<td>Food on Cards</td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+</tr>
+
+<tr>
+<td>Tucked Cards</td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+<td><input type="number" value="0" oninput="updateTotals()"></td>
+</tr>
+
+<tr class="total">
+<td>Total</td>
+<td id="t0">0</td>
+<td id="t1">0</td>
+<td id="t2">0</td>
+<td id="t3">0</td>
+<td id="t4">0</td>
+</tr>
+
+</tbody>
+</table>
+
+<script>
+function updateTotals() {
+    const rows = document.querySelectorAll("tbody tr");
+    const playerTotals = [0,0,0,0,0];
+
+    rows.forEach((row, rIndex) => {
+        if(rIndex === rows.length - 1) return;
+
+        const inputs = row.querySelectorAll("input");
+
+        inputs.forEach((input, i) => {
+            const value = parseInt(input.value) || 0;
+            playerTotals[i] += value;
+        });
+    });
+
+    playerTotals.forEach((total, i) => {
+        document.getElementById("t"+i).innerText = total;
+    });
+}
+
+updateTotals();
+</script>
+
+</body>
+</html>
