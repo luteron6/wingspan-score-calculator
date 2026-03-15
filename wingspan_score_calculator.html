@@ -6,8 +6,8 @@
 <style>
 
 @font-face {
-    font-family: "WingspanCustom";
-    src: url("./CardenioModern-Bold.otf") format("opentype");
+    font-family: "Wingspan";
+    src: url("./CardenioModern-Regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +15,7 @@
 
 
 body {
-font-family: "WingspanCustom", Arial, sans-serif;
+font-family: "Wingspan";
 background-image: url("background v1.jpg");
 background-size: cover;
 background-position: center;
@@ -41,7 +41,8 @@ th, td {
 
 .category-cell {
     text-align:left;
-    font-weight:bold;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .left-vertical {
@@ -51,6 +52,7 @@ th, td {
     letter-spacing: 1px;
     background: rgba(224, 215, 190, 0.60);
     min-width: 34px;
+    font-size: 15px;
 }
 
 input {
@@ -111,7 +113,7 @@ thead th {
 </tr>
 
 <tr>
-<td class="category-cell">End-of-Round Goals</td>
+<td class="category-cell">End-of-round goals</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -120,7 +122,7 @@ thead th {
 </tr>
 
 <tr>
-<td class="left-vertical" rowspan="4">1 Point Each</td>
+<td class="left-vertical" rowspan="3">1 Point Each</td>
 <td class="category-cell">Eggs</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -148,6 +150,7 @@ thead th {
 </tr>
 
 <tr class="total">
+<td></td>
 <td class="category-cell">Total</td>
 <td id="t0">0</td>
 <td id="t1">0</td>
