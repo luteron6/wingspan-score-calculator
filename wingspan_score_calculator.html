@@ -39,13 +39,23 @@ th, td {
     text-align:center;
 }
 
-th:first-child, td:first-child {
+.category-cell {
     text-align:left;
     font-weight:bold;
 }
 
+.left-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: rgba(224, 215, 190, 0.60);
+    min-width: 34px;
+}
+
 input {
     width:60px;
+    font-family: inherit;
     font-size:16px;
     text-align:center;
 }
@@ -56,7 +66,7 @@ input {
 }
 
 thead th {
-    background:#e0d7be;
+    background: rgba(224, 215, 190, 0.60);
 }
 
 
@@ -70,6 +80,7 @@ thead th {
 <table>
 <thead>
 <tr>
+<th style="border-top: none; border-left: none; background: none"></th>
 <th>Category</th>
 <th>Player 1</th>
 <th>Player 2</th>
@@ -81,7 +92,8 @@ thead th {
 
 <tbody>
 <tr>
-<td>Birds</td>
+<td class="left-vertical" rowspan="3">Amount on Cards</td>
+<td class="category-cell">Birds</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -90,7 +102,7 @@ thead th {
 </tr>
 
 <tr>
-<td>Bonus Cards</td>
+<td class="category-cell">Bonus Cards</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -99,7 +111,7 @@ thead th {
 </tr>
 
 <tr>
-<td>End-of-Round Goals</td>
+<td class="category-cell">End-of-Round Goals</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -108,7 +120,8 @@ thead th {
 </tr>
 
 <tr>
-<td>Eggs</td>
+<td class="left-vertical" rowspan="4">1 Point Each</td>
+<td class="category-cell">Eggs</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -117,7 +130,7 @@ thead th {
 </tr>
 
 <tr>
-<td>Food on Cards</td>
+<td class="category-cell">Food on Cards</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -126,7 +139,7 @@ thead th {
 </tr>
 
 <tr>
-<td>Tucked Cards</td>
+<td class="category-cell">Tucked Cards</td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
 <td><input type="number" value="0" oninput="updateTotals()"></td>
@@ -135,7 +148,7 @@ thead th {
 </tr>
 
 <tr class="total">
-<td>Total</td>
+<td class="category-cell">Total</td>
 <td id="t0">0</td>
 <td id="t1">0</td>
 <td id="t2">0</td>
