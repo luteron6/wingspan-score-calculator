@@ -20,20 +20,20 @@
     font-style: normal;
 }
 
+
 body {
 font-family: "Wingspan";
 background-image: url("background v3.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-padding: 20px;
+height: 100vh;
+width: 100vw;
+margin: 0;
+padding: 0;
+overflow: hidden;
 }
 
-.table-wrap {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
 
 
 h1 {
@@ -43,7 +43,6 @@ h1 {
 table {
     border-collapse: collapse;
     margin:auto;
-    min-width: 760px;
 }
 
 th, td {
@@ -69,43 +68,10 @@ th, td {
 }
 
 input {
-    width:68px;
-    min-height:44px;
+    width:60px;
     font-family: inherit;
-    font-size:18px;
+    font-size:16px;
     text-align:center;
-}
-
-@media (max-width: 700px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 30px;
-        margin: 8px 0 14px;
-    }
-
-    th, td {
-        padding: 6px;
-    }
-
-    .category-cell {
-        font-size: 17px;
-        min-width: 128px;
-    }
-
-    .left-vertical {
-        min-width: 28px;
-        font-size: 13px;
-        letter-spacing: 0.8px;
-    }
-
-    input {
-        width: 64px;
-        min-height: 48px;
-        font-size: 18px;
-    }
 }
 
 .total {
@@ -117,15 +83,45 @@ thead th {
     background: rgba(205, 228, 198, 0.45);
 }
 
+@media (max-width: 680px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 8px 0 14px;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+
+    .category-cell {
+        font-size: 20px;
+        min-width: 120px;
+    }
+
+    .left-vertical {
+        min-width: 25px;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+    }
+
+    input {
+        width: 64px;
+        min-height: 48px;
+        font-size: 18px;
+    }
+}
 
 </style>
 </head>
 
 <body>
-
+<br>
 <h1>Wingspan Score Calculator</h1>
 
-<div class="table-wrap">
 <table>
 <thead>
 <tr>
@@ -208,7 +204,6 @@ thead th {
 
 </tbody>
 </table>
-</div>
 
 <script>
 function updateTotals() {
