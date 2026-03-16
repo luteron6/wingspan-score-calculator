@@ -123,90 +123,88 @@
     <br>
     <h1>Wingspan Score Calculator</h1>
 
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th style="border-top: none; border-left: none; background: none"></th>
-                    <th>Category</th>
-                    <th>Player 1</th>
-                    <th>Player 2</th>
-                    <th>Player 3</th>
-                    <th>Player 4</th>
-                    <th>Player 5</th>
-                </tr>
-            </thead>
+    <table>
+        <thead>
+            <tr>
+                <th style="border-top: none; border-left: none; background: none"></th>
+                <th>Category</th>
+                <th>Player 1</th>
+                <th>Player 2</th>
+                <th>Player 3</th>
+                <th>Player 4</th>
+                <th>Player 5</th>
+            </tr>
+        </thead>
 
-            <tbody>
-                <tr>
-                    <td class="left-vertical" rowspan="3">Amount on Cards</td>
-                    <td class="category-cell">Birds</td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                </tr>
+        <tbody>
+            <tr>
+                <td class="left-vertical" rowspan="3">Amount on Cards</td>
+                <td class="category-cell">Birds</td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+            </tr>
 
-                <tr>
-                    <td class="category-cell">Bonus Cards</td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                </tr>
+            <tr>
+                <td class="category-cell">Bonus Cards</td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+            </tr>
 
-                <tr>
-                    <td class="category-cell">End-of-round goals</td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                </tr>
+            <tr>
+                <td class="category-cell">End-of-round goals</td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+            </tr>
 
-                <tr>
-                    <td class="left-vertical" rowspan="3">1 Point Each</td>
-                    <td class="category-cell">Eggs</td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                </tr>
+            <tr>
+                <td class="left-vertical" rowspan="3">1 Point Each</td>
+                <td class="category-cell">Eggs</td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+            </tr>
 
-                <tr>
-                    <td class="category-cell">Food on Cards</td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                </tr>
+            <tr>
+                <td class="category-cell">Food on Cards</td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+            </tr>
 
-                <tr>
-                    <td class="category-cell">Tucked Cards</td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-                </tr>
+            <tr>
+                <td class="category-cell">Tucked Cards</td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+            </tr>
 
-                <tr class="total">
-                    <td style="border-bottom: none; border-left: none; background: none"></td>
-                    <td class="category-cell">Total</td>
-                    <td id="t0">0</td>
-                    <td id="t1">0</td>
-                    <td id="t2">0</td>
-                    <td id="t3">0</td>
-                    <td id="t4">0</td>
-                </tr>
+            <tr class="total">
+                <td style="border-bottom: none; border-left: none; background: none"></td>
+                <td class="category-cell">Total</td>
+                <td id="t0">0</td>
+                <td id="t1">0</td>
+                <td id="t2">0</td>
+                <td id="t3">0</td>
+                <td id="t4">0</td>
+            </tr>
 
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
 
     <script>
         function updateTotals() {
