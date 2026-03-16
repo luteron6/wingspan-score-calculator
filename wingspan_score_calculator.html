@@ -1,233 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wingspan Score Calculator</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wingspan Score Calculator</title>
+    <style>
+        @font-face {
+            font-family: "Wingspan";
+            src: url("./CardenioModern-Regular.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: "Wingspan";
-    src: url("./CardenioModern-Regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Wingspan";
-    src: url("./CardenioModern-bold.otf") format("opentype");
-    font-weight: Bold;
-    font-style: normal;
-}
-
-
-body {
-font-family: "Wingspan";
-background-image: url("background v3.png");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 100vh;
-width: 100vw;
-margin: 0;
-padding: 0;
-overflow: hidden;
-}
+        @font-face {
+            font-family: "Wingspan";
+            src: url("./CardenioModern-bold.otf") format("opentype");
+            font-weight: Bold;
+            font-style: normal;
+        }
 
 
+        body {
+            font-family: "Wingspan";
+            background-image: url("background v3.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-h1 {
-    text-align:center;
-}
 
-table {
-    border-collapse: collapse;
-    margin:auto;
-}
 
-th, td {
-    border:2px solid rgb(15, 39, 28);
-    padding:8px;
-    text-align:center;
-}
+        h1 {
+            text-align: center;
+        }
 
-.category-cell {
-    text-align:left;
-    font-weight: normal;
-    font-size: 18px;
-}
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
 
-.left-vertical {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    background: rgba(205, 228, 198, 0.45);
-    min-width: 34px;
-    font-size: 15px;
-}
+        th,
+        td {
+            border: 2px solid rgb(15, 39, 28);
+            padding: 8px;
+            text-align: center;
+        }
 
-input {
-    width:60px;
-    font-family: inherit;
-    font-size:16px;
-    text-align:center;
-}
+        .category-cell {
+            text-align: left;
+            font-weight: normal;
+            font-size: 18px;
+        }
 
-.total {
-    font-weight:bold;
-    font-size:18px;
-}
+        .left-vertical {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            background: rgba(205, 228, 198, 0.45);
+            min-width: 34px;
+            font-size: 15px;
+        }
 
-thead th {
-    background: rgba(205, 228, 198, 0.45);
-}
+        input {
+            width: 60px;
+            font-family: inherit;
+            font-size: 16px;
+            text-align: center;
+        }
 
-@media (max-width: 680px) {
-    body {
-        padding: 5px;
-    }
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-    h1 {
-        font-size: 30px;
-        margin: 8px 0 14px;
-    }
+        thead th {
+            background: rgba(205, 228, 198, 0.45);
+        }
 
-    th, td {
-        padding: 4px;
-    }
+        @media (max-width: 680px) {
+            body {
+                padding: 5px;
+            }
 
-    .category-cell {
-        font-size: 20px;
-        min-width: 120px;
-    }
+            h1 {
+                font-size: 30px;
+                margin: 8px 0 14px;
+            }
 
-    .left-vertical {
-        min-width: 25px;
-        font-size: 15px;
-        letter-spacing: 0.8px;
-    }
+            th,
+            td {
+                padding: 4px;
+            }
 
-    input {
-        width: 64px;
-        min-height: 48px;
-        font-size: 18px;
-    }
-}
+            .category-cell {
+                font-size: 20px;
+                min-width: 120px;
+            }
 
-</style>
+            .left-vertical {
+                min-width: 25px;
+                font-size: 15px;
+                letter-spacing: 0.8px;
+            }
+
+            input {
+                width: 64px;
+                min-height: 48px;
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<br>
-<h1>Wingspan Score Calculator</h1>
+    <br>
+    <h1>Wingspan Score Calculator</h1>
 
-<table>
-<thead>
-<tr>
-<th style="border-top: none; border-left: none; background: none"></th>
-<th>Category</th>
-<th>Player 1</th>
-<th>Player 2</th>
-<th>Player 3</th>
-<th>Player 4</th>
-<th>Player 5</th>
-</tr>
-</thead>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="border-top: none; border-left: none; background: none"></th>
+                    <th>Category</th>
+                    <th>Player 1</th>
+                    <th>Player 2</th>
+                    <th>Player 3</th>
+                    <th>Player 4</th>
+                    <th>Player 5</th>
+                </tr>
+            </thead>
 
-<tbody>
-<tr>
-<td class="left-vertical" rowspan="3">Amount on Cards</td>
-<td class="category-cell">Birds</td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-</tr>
+            <tbody>
+                <tr>
+                    <td class="left-vertical" rowspan="3">Amount on Cards</td>
+                    <td class="category-cell">Birds</td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                </tr>
 
-<tr>
-<td class="category-cell">Bonus Cards</td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-</tr>
+                <tr>
+                    <td class="category-cell">Bonus Cards</td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                </tr>
 
-<tr>
-<td class="category-cell">End-of-round goals</td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-</tr>
+                <tr>
+                    <td class="category-cell">End-of-round goals</td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                </tr>
 
-<tr>
-<td class="left-vertical" rowspan="3">1 Point Each</td>
-<td class="category-cell">Eggs</td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-</tr>
+                <tr>
+                    <td class="left-vertical" rowspan="3">1 Point Each</td>
+                    <td class="category-cell">Eggs</td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                </tr>
 
-<tr>
-<td class="category-cell">Food on Cards</td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-</tr>
+                <tr>
+                    <td class="category-cell">Food on Cards</td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                </tr>
 
-<tr>
-<td class="category-cell">Tucked Cards</td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-<td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
-</tr>
+                <tr>
+                    <td class="category-cell">Tucked Cards</td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                    <td><input type="number" pattern="[0-9]*" placeholder="0" oninput="updateTotals()"></td>
+                </tr>
 
-<tr class="total">
-<td style="border-bottom: none; border-left: none; background: none"></td>
-<td class="category-cell">Total</td>
-<td id="t0">0</td>
-<td id="t1">0</td>
-<td id="t2">0</td>
-<td id="t3">0</td>
-<td id="t4">0</td>
-</tr>
+                <tr class="total">
+                    <td style="border-bottom: none; border-left: none; background: none"></td>
+                    <td class="category-cell">Total</td>
+                    <td id="t0">0</td>
+                    <td id="t1">0</td>
+                    <td id="t2">0</td>
+                    <td id="t3">0</td>
+                    <td id="t4">0</td>
+                </tr>
 
-</tbody>
-</table>
+            </tbody>
+        </table>
+    </div>
 
-<script>
-function updateTotals() {
-    const rows = document.querySelectorAll("tbody tr");
-    const playerTotals = [0,0,0,0,0];
+    <script>
+        function updateTotals() {
+            const rows = document.querySelectorAll("tbody tr");
+            const playerTotals = [0, 0, 0, 0, 0];
 
-    rows.forEach((row, rIndex) => {
-        if(rIndex === rows.length - 1) return;
+            rows.forEach((row, rIndex) => {
+                if (rIndex === rows.length - 1) return;
 
-        const inputs = row.querySelectorAll("input");
+                const inputs = row.querySelectorAll("input");
 
-        inputs.forEach((input, i) => {
-            const value = parseInt(input.value) || 0;
-            playerTotals[i] += value;
-        });
-    });
+                inputs.forEach((input, i) => {
+                    const value = parseInt(input.value) || 0;
+                    playerTotals[i] += value;
+                });
+            });
 
-    playerTotals.forEach((total, i) => {
-        document.getElementById("t"+i).innerText = total;
-    });
-}
+            playerTotals.forEach((total, i) => {
+                document.getElementById("t" + i).innerText = total;
+            });
+        }
 
-updateTotals();
-</script>
+        updateTotals();
+    </script>
 
 </body>
+
 </html>
