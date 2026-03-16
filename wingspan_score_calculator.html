@@ -115,6 +115,23 @@
                 min-height: 48px;
                 font-size: 18px;
             }
+
+            /* Hide the last four columns (Players 2-5) on phones */
+            table tr>*:last-child,
+            table tr>*:nth-last-child(2),
+            table tr>*:nth-last-child(3),
+            table tr>*:nth-last-child(4) {
+                display: none;
+            }
+
+            .player-one-header {
+                font-size: 0;
+            }
+
+            .player-one-header::after {
+                content: "Score";
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -128,7 +145,7 @@
             <tr>
                 <th style="border-top: none; border-left: none; background: none"></th>
                 <th>Category</th>
-                <th>Player 1</th>
+                <th class="player-one-header">Player 1</th>
                 <th>Player 2</th>
                 <th>Player 3</th>
                 <th>Player 4</th>
