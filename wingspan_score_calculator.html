@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wingspan Score Calculator</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
     <style>
         @font-face {
             font-family: "Wingspan";
@@ -32,6 +34,8 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            text-align: center;
+            font-size: 12px;
         }
 
 
@@ -40,6 +44,11 @@
             text-align: center;
         }
 
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+        }
         table {
             border-collapse: collapse;
             margin: auto;
@@ -223,6 +232,9 @@
         </tbody>
     </table>
 
+<h2><br>made with ❤️ by Caleb T.</h2>
+Fonts by Nils Cordes.
+
     <script>
         function updateTotals() {
             const rows = document.querySelectorAll("tbody tr");
@@ -246,7 +258,6 @@
 
         updateTotals();
     </script>
-
 </body>
 
 </html>
