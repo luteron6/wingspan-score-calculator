@@ -1,6 +1,7 @@
 # Wingspan Score Calculator
 
 [LIVE HERE!](https://htmlpreview.github.io/?https://github.com/luteron6/wingspan-score-calculator/blob/main/wingspan_score_calculator.html)
+Add it as a web app on you phone's home screen.
 
 A lightweight, browser-based score calculator for the board game Wingspan.
 
@@ -16,7 +17,7 @@ The app is a single HTML file with no build tools and no dependencies. Open it i
 ## Installation
 
 A couple options:
-1. NO INSTALLATION! Visit the live webpage [here](https://htmlpreview.github.io/?https://github.com/luteron6/wingspan-score-calculator/blob/main/wingspan_score_calculator.html). That's it!
+1. NO INSTALLATION! Visit the live webpage [here](https://htmlpreview.github.io/?https://github.com/luteron6/wingspan-score-calculator/blob/main/wingspan_score_calculator.html). That's it! Add it to your phone's home screen for easy access.
 
 2. Pull this repo and run the .html file.
 
