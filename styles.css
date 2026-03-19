@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Wingspan";
+    src: url("./CardenioModern-Regular.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Wingspan";
+    src: url("./CardenioModern-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+body {
+    font-family: "Wingspan";
+    background-image: url("background v3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th,
+td {
+    border: 2px solid rgb(15, 39, 28);
+    padding: 8px;
+    text-align: center;
+}
+
+.category-cell {
+    text-align: left;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.left-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    background: rgba(205, 228, 198, 0.45);
+    min-width: 34px;
+    font-size: 15px;
+}
+
+input {
+    width: 60px;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: center;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+thead th {
+    background: rgba(205, 228, 198, 0.45);
+}
+
+@media (max-width: 680px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 8px 0 14px;
+    }
+
+    th,
+    td {
+        padding: 4px;
+    }
+
+    .category-cell {
+        font-size: 20px;
+        min-width: 120px;
+    }
+
+    .left-vertical {
+        min-width: 25px;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+    }
+
+    input {
+        width: 64px;
+        min-height: 48px;
+        font-size: 18px;
+    }
+
+    /* Hide the last four columns (Players 2-5) on phones */
+    table tr>*:last-child,
+    table tr>*:nth-last-child(2),
+    table tr>*:nth-last-child(3),
+    table tr>*:nth-last-child(4) {
+        display: none;
+    }
+
+    .player-one-header {
+        font-size: 0;
+    }
+
+    .player-one-header::after {
+        content: "Score";
+        font-size: 20px;
+    }
+}
